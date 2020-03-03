@@ -1,0 +1,9 @@
+<h1>Movies</h1>
+
+<ul>
+    <% @movies.each_with_index do |movie, index| %>
+        <li>
+            <%= movie["title"] %> - <%= movie["rating"] %> <%= link_to "show", movie_path(index + 1) %>
+        </li>
+    <% end %>
+</ul>
